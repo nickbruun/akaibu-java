@@ -4,7 +4,7 @@ import java.io.InputStream;
 import java.io.IOException;
 import java.io.BufferedInputStream;
 
-import java.util.zip.DeflaterInputStream;
+import java.util.zip.InflaterInputStream;
 
 /**
  * zlib-compressed archive input stream reader.
@@ -22,6 +22,6 @@ public class InputStreamZlibCompressedArchiveReader
      * @param stream Stream.
      */
     public InputStreamZlibCompressedArchiveReader(InputStream stream) {
-        super(new DeflaterInputStream(stream));
+        super(new InflaterInputStream(stream));
     }
 }
